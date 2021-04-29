@@ -203,6 +203,7 @@ Esse artigo é uma versão inspirada na solução do problema <b>TowSum</b> prop
 
 
 Você pode conferir o código do artigo no meu [gitHub](https://github.com/Udinei/o-algoritmo-de-busca-linear-e-o-Java-artigo) 
+
 Dúvidas ou sugestões, manda no meu email: udineisilva@gmail.com
 
 
