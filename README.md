@@ -90,7 +90,7 @@ O HashMap é uma implementação da interface Map e de forma simples de dizer, �
 ![](images/hashmap-key-value.png)
 
 
-Você pode aprender mais sobre HashMap lendo o artigo do  RamsKrishna Joshi  ou do Nashim Salmay e consultando as referências no final desse artigo. Com uso do HashMap  reduzimos o tempo de pesquisa de O(n) para O(1)  trocando espaço por velocidade.
+Você pode aprender mais sobre HashMap lendo o artigo do [RamsKrishna Joshi](https://www.slideshare.net/RamakrishnaJoshi1/how-hashmap-works-internally-in-java)  ou do [Nashim Salmay](https://laptrinhx.com/do-you-know-how-map-hashmap-works-internally-in-java-part-1-257465544/) e consultando as referências no final desse artigo. Com uso do HashMap  reduzimos o tempo de pesquisa de O(n) para O(1)  trocando espaço por velocidade.
 
 Uma tabela Hash é construída exatamente para esse propósito, de suportar pesquisas rápidas em um tempo quase constante.
 
