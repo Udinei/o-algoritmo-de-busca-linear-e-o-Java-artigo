@@ -206,7 +206,7 @@ Você pode conferir o código do artigo no meu [gitHub](https://github.com/Udine
 
 Dúvidas ou sugestões, manda no meu email: udineisilva@gmail.com
 
-
+## [ Nível Iniciante ]
 # Referências
 - [Algoritmos Teoria e Prática](https://www.cin.ufpe.br/~ara/algoritmos-%20portugu%EAs-%20cormen.pdf)
 - [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
