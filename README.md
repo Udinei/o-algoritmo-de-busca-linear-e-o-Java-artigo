@@ -98,11 +98,11 @@ Uma implementação simples do algoritmo usando Hash Map usa uma interação “
 ```java
 public static int buscaLinearComHashMapTwoPass(int[] vetor, int numeroProcurado) {
 Map<Integer, Integer> map = new HashMap<>();
-// passsando os dados do vetor pra um HasMap
+// passsando os dados do vetor pra um HasMap, o elemento do vetor sera a chave
 for (int i = 0; i < vetor.length; i++) {
 map.put(vetor[i], i);
 }
-// verificando se o número procurado existe no hashMap
+// verificando se o número procurado (a chave) existe no hashMap
 if (map.containsKey(numeroProcurado))
 return map.get(numeroProcurado);
 // se nao encontrado
@@ -206,7 +206,7 @@ Você pode conferir o código do artigo no meu [gitHub](https://github.com/Udine
 
 Dúvidas ou sugestões, manda no meu email: udineisilva@gmail.com
 
-## [ Nível Iniciante ]
+
 # Referências
 - [Algoritmos Teoria e Prática](https://www.cin.ufpe.br/~ara/algoritmos-%20portugu%EAs-%20cormen.pdf)
 - [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
