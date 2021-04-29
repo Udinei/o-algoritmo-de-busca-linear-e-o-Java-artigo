@@ -197,12 +197,13 @@ Como podemos ver esse algoritmo pode ser abordado de diversas formas, e nesse ar
 
 A Stream API eleva o Java para outro nível de codificação, pois diminui a quantidade de código a ser escrito e absorve responsabilidades de controle de  fluxos como while, for, do while etc, ficando somente as regras de negócio  a única responsabilidade do desenvolvedor.
 
-A evolução do Java com uso de Streams  fornece técnicas sofisticadas de processamento de dados, e uma  nova forma de escrever códigos  Java, sinalizando uma forte tendência em Java, fazer uso dessa API para solucionar de forma simples e objetiva algoritmos como o de Busca Linear e outros algoritmos de grande complexidade tornando-os mais eficientes, no gerenciamento de memória (heap) e trabalhos de execução paralela.
+A evolução do Java com uso de Streams  fornece técnicas sofisticadas de processamento de dados, e uma  nova forma de escrever códigos  Java, sinalizando uma forte tendência em Java, fazer uso dessa API para solucionar de forma simples e objetiva algoritmos como o de Busca Linear e outros algoritmos de grande complexidade tornando-os mais eficientes em gerenciamento de memória heap e trabalhos de execução paralela.
+
+Esse artigo é uma versão inspirada na solução do problema <b>TowSum</b> proposto pela LeetCode em seu [site](https://leetcode.com/problems/two-sum/solution/). A Leetcode é uma plataforma que ajuda você a aprimorar suas habilidades em programação.
 
 
-
-Você pode conferir esse código no meu [gitHub](https://github.com/Udinei/o-algoritmo-de-busca-linear-e-o-Java-artigo) 
-
+Você pode conferir o código do artigo no meu [gitHub](https://github.com/Udinei/o-algoritmo-de-busca-linear-e-o-Java-artigo) 
+Dúvidas ou sugestões, manda no meu email: udineisilva@gmail.com
 
 
 # Referências
