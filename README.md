@@ -96,17 +96,20 @@ Uma tabela Hash é construída exatamente para esse propósito, de suportar pesq
 
 Uma implementação simples do algoritmo usando Hash Map usa uma interação “for“, onde adicionamos o valor de cada elemento e seu índice à tabela (Map) e só então verificamos com um “if” se o número existe na tabela.
 ```java
-public static int buscaLinearComHashMapTwoPass(int[] vetor, int numeroProcurado) {
-Map<Integer, Integer> map = new HashMap<>();
-// passsando os dados do vetor pra um HasMap, o elemento do vetor sera a chave
-for (int i = 0; i < vetor.length; i++) {
-map.put(vetor[i], i);
-}
-// verificando se o número procurado (a chave) existe no hashMap
-if (map.containsKey(numeroProcurado))
-return map.get(numeroProcurado);
-// se nao encontrado
-return –1;
+ public static int buscaLinearComHashMapTwoPass(int[] vetor, int numeroProcurado) {
+    Map<Integer, Integer> map = new HashMap<>();
+    
+    // passsando os dados do vetor pra um HasMap, o elemento do vetor sera a chave
+    for (int i = 0; i < vetor.length; i++) {
+        map.put(vetor[i], i);
+    }
+    
+    // verificando se o número procurado (a chave) existe no hashMap
+    if (map.containsKey(numeroProcurado))
+        return map.get(numeroProcurado);
+    
+    // se nao encontrado
+    return –1;
 }
 ```
 
@@ -118,14 +121,16 @@ Acontece que podemos fazer isso em uma única iteração “for“. Enquanto ite
 ```java
 public static int buscaLinearComHashMapOnePass(int[] vetor, int numeroProcurado) {
 
-
     Map<Integer, Integer> map = new HashMap<>();
+    
     for (int i = 0; i < vetor.length; i++) {
         // verifica se o numeroProcurado ja existe no HashMap
         if (map.containsKey(numeroProcurado))
             return map.get(numeroProcurado);
+        
         map.put(vetor[i], i); // passsando os dados do vetor pra um HasMap
     }
+    
     // se nao encontrado
     return -1;
 }
@@ -137,13 +142,13 @@ Streams API é um recurso que o Java traz  a partir da versão 8, com novas clas
 
 
 ```java
-private static int buscaLinearStream(int[] vetor, int numeroProcurado) {
-return IntStream.range(0, vetor.length)
-.filter(i -> vetor[i] == numeroProcurado)
-.mapToObj(index -> index)
-.findFirst()
-.orElse(-1); // se nao encontrou retorna -1
-}
+ private static int buscaLinearStream(int[] vetor, int numeroProcurado) {
+    return IntStream.range(0, vetor.length)
+        .filter(i -> vetor[i] == numeroProcurado)
+        .mapToObj(index -> index)
+        .findFirst()
+        .orElse(-1); // se nao encontrou retorna -1
+ }
 ```
 
 ## Coleções como fontes de dados para Streams
@@ -172,22 +177,22 @@ Inclusive textos e frase podem ser facilmente manipuladas com Stream,  transform
 //   entrada: Udinei da Silva
 //   saida: [Udinei, da, silva]
 
-public static List<String> split(String str){
-return Stream.of(str.split(" "))
-.map(elem -> new String(elem))
-.collect(Collectors.toList());
-}
+ public static List<String> split(String str){
+    return Stream.of(str.split(" "))
+    .map(elem -> new String(elem))
+    .collect(Collectors.toList());
+ }
 ```
 ```java
 // Convertendo uma string em uma Lista de strings
 // entrada: Udinei da Silva
 // saida: [Udinei, da, silva]
 
-public static List<String> split(String str){
-return Stream.of(str.split(” “))
-.map(elem -> new String(elem))
-.collect(Collectors.toList());
-}
+ public static List<String> split(String str){
+    return Stream.of(str.split(” “))
+       .map(elem -> new String(elem))
+       .collect(Collectors.toList());
+ }
 ```
 
 # Conclusão
@@ -202,7 +207,8 @@ A evolução do Java com uso de Streams  fornece técnicas sofisticadas de proce
 Esse artigo é uma versão inspirada na solução do problema <b>TowSum</b> proposto pela LeetCode em seu [site](https://leetcode.com/problems/two-sum/solution/). A Leetcode é uma plataforma que ajuda você a aprimorar suas habilidades em programação. Vale a pena se cadastrar no site, tem muito conteúdo de valor lá e muita coisa grátis sobre programação. 
 
 
-Você pode conferir o código do artigo no meu [gitHub](https://github.com/Udinei/o-algoritmo-de-busca-linear-e-o-Java-artigo) 
+Você pode conferir o código do artigo no meu [gitHub](https://github.com/Udinei/o-algoritmo-de-busca-linear-e-o-Java-artigo) ou ler o artigo no meu blog [dicasna.com](https://dicasna.com/tecnologia/) (em construção)
+
 
 Dúvidas ou sugestões, manda no meu email: udineisilva@gmail.com
 
