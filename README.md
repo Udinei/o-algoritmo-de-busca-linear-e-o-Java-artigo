@@ -138,7 +138,7 @@ public static int buscaLinearComHashMapOnePass(int[] vetor, int numeroProcurado)
 # Quarta abordagem
 ### Utilizando Stream API
 
-Streams API é um recurso que o Java traz  a partir da versão 8, com novas classes e métodos que ajudam a manipular coleções (vetor, array, listas) de maneira mais simples e eficiente, usando o estilo de programação funcional.  Que muda a forma como se escreve o código. Abaixo o algoritmo de Busca Linear escrito em Java usando a sintaxe das linguagens que seguem o paradigma funcional. IntStream é uma interface dessa API e tem suporte a operações de agregação sequenciais e paralelas, para encontrar um número dentro do vetor (array ou lista). Veja código abaixo:
+Streams API é um recurso que o Java traz  a partir da versão 8, com novas classes e métodos que ajudam a manipular coleções (vetor, array, listas) de maneira mais simples e eficiente, usando o estilo de programação funcional.  Que muda a forma como se escreve o código. Abaixo o algoritmo de Busca Linear escrito em Java usando a sintaxe das linguagens que seguem o paradigma funcional, combinadas com as expressões lambda. IntStream é uma interface dessa API e tem suporte a operações de agregação sequenciais e paralelas, para encontrar um número dentro do vetor (array ou lista). Veja código abaixo:
 
 
 ```java
