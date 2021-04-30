@@ -1,8 +1,6 @@
 package com.usbase.buscaLinear.busca;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -21,19 +19,21 @@ public class BuscaLinear {
     public static void main(String[] args) {
         int vetor[] = {1, 5, 9, 4, 8, 50, 30, 40, 78, 63, 47};
         int numeroProcurado = 63;
+        String string = "Udinei da Silva";
 
        long tempoInicial = System.nanoTime();
 
         // Descomente para executar os metodos de busca
         // Para uma melhor observação do comportamento, recomendo executar um metodo de cada vez
-         System.out.println(buscaLinear(vetor, numeroProcurado));                  //   1176300 - time execution
+        // System.out.println(buscaLinear(vetor, numeroProcurado));                  //   1176300 - time execution
         // System.out.println(buscaLinearComHashMap(vetor, numeroProcurado));        //    357500 - time execution
         // System.out.println(buscaLinearComHashMapOnePass(vetor, numeroProcurado)); //    244300 - time execution
         // System.out.println(buscaLinearStream(vetor, numeroProcurado));            //   7114800 - time execution
 
         // Execucao dos metodos de conversao de String utilizando Streams API
-        // System.out.println(split("Udinei da silva"));
-        // System.out.println(splitToListOfChar("Udinei da silva"));
+        // System.out.println(split(string));
+        // System.out.println(splitToListOfChar(string));
+        // System.out.println(charRepetidoString(string));
 
         long tempoFinal = System.nanoTime();
 
@@ -51,6 +51,19 @@ public class BuscaLinear {
                 .collect(Collectors.toList());
     }
 
+    // Converte um String em uma Lista de caracter
+    // entrada:  Udinei da Silva
+    // saida: [ , a, d, i]
+    public static Set<Character> charRepetidoString(String str) {
+        Set<String> allItems = new HashSet<>();
+
+        Set<Character> duplicates =  str.chars()
+                                      .mapToObj(item -> (char) item)
+                                      .filter(n -> !allItems.add(String.valueOf(n))) // remove os repetidos
+                                      .collect(Collectors.toSet());
+
+         return duplicates;
+    }
 
 
     // Converte um String em uma Lista de caracter
